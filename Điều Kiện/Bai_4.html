@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bai1 {
+            margin: 50px auto;
+            width: 500px;
+            height: 300px;
+            background-color: rgb(173, 255, 228);
+            text-align: center;
+        }
+        
+        h2 {
+            padding: 20px;
+            color: red
+        }
+        
+        input {
+            text-align: center;
+            font-size: 20px;
+            position: relative;
+            top: 35px
+        }
+        
+        button {
+            font-size: 20px;
+            position: relative;
+            top: 35px
+        }
+        
+        p {
+            color: rgb(9, 46, 255);
+            font-size: 20px;
+            position: relative;
+            top: 80px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bai1">
+
+        <h2>What is the “official” name of JavaScript?</h2>
+        <input type="text" class="text"></input>
+        <button class="click" onclick="Click()">Trả Lời</button>
+        <p id="traloi"></p>
+
+        <script>
+            function Click() {
+                let string = document.querySelector(".text").value;
+                if (string === "ECMAScript") {
+                    document.getElementById("traloi").innerHTML = "Right !";
+                } else {
+                    document.getElementById("traloi").innerHTML = "Didn’t know? ECMAScript!";
+                }
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

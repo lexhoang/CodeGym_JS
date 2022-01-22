@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                body{background-color: rgb(173, 236, 245);}
+                  #gamedoanso{margin: 150px auto;
+                      width: 500px; height:300px;
+                     background-color:rgb(243, 248, 193)}
+                     h1{color:rgb(253, 0, 127);
+                           text-align:center;
+                          position: relative;top:20px
+                    }
+                  button {font-size: 30px;
+                    margin: 100px 180px;
+                    color: #a961ec;
+                      background-color:rgb(0, 0, 0)
+                  }
+                  button:hover{color:rgb(4, 255, 16)}
+    </style>
+</head>
+<body>
+     <div id="gamedoanso">
+                       <h1> Cùng Chơi Game Đoán Số </h1>
+                       <button id="game" onclick="game()"> You're READY</button>
+
+     </div>
+
+   <script>
+                function game() {
+                let maxNumber = parseFloat(prompt("Nhập vào khoảng số mà bạn muốn đoán từ 1 -->...."))
+                let n = Math.floor(Math.random() * maxNumber);
+                let num, gameOver = 1;
+                do{
+                     num = parseInt(prompt("Số bạn muốn đoán"));
+
+                     if( num < n){
+                        alert("nhỏ hơn rồi");
+                    }else if(num > n){
+                        alert("lớn quá rồi");
+                    }
+                    gameOver++
+                }
+                while(num != n && gameOver <= 3){
+                if(gameOver > 3){
+                    alert("Game Over" + " Số đúng là: " + n);
+                }else{
+                    alert(" Bạn đoán đúng rồi!!! " + " Số đúng là: " + n);
+                }
+                }
+            }
+
+    </script>
+</body>
+</html>

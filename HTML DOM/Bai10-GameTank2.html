@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tank</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .buttons {
+
+      position: relative;
+      width: 8rem;
+      height: 7rem;
+      top: 2rem;
+    }
+    .button {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+    }
+    .up {background-color:hotpink;
+      top: 0;
+      left: 4rem;
+    }
+
+    .down {background-color:hotpink;
+      bottom: 0;
+      left: 4rem;
+    }
+
+    .right {background-color:hotpink;
+      top: 2.5rem;
+      right: 0;
+    }
+
+    .left {background-color:hotpink;
+      top: 2.5rem;
+      left: 2rem;
+    }
+    .top:hover{background-color:aqua}
+    .down:hover{background-color:aqua}
+    .right:hover{background-color:aqua}
+    .left:hover{background-color:aqua}
+  </style>
+</head>
+<body onload="randBoom()">
+  <div style="border: 10px solid hotpink; height: 300px; width: 600px; background-color: rgb(255, 255, 255);">
+    <img id="tank"
+      src="https://s3.ap-southeast-1.amazonaws.com/learn.codegym.vn/media/public/2020/12/02171059/tank.png"
+      style="position: relative; top: 0px; left: 0px;"
+      width="30"
+      height="30">
+
+      <img id="boom"
+      src="https://s3.ap-southeast-1.amazonaws.com/learn.codegym.vn/media/public/2020/12/04175453/boom.png"
+      style="position: relative;"
+      width="30"
+      height="30">
+  </div>
+
+  <div class="buttons">
+    <button id="upBtn" class="button up" value="up" onclick="moveUp()">&uarr;</button>
+    <button id="downBtn" class="button down" value="down" onclick="moveDown()">&darr;</button>
+    <button id="rightBtn" class="button right" value="right" onclick="moveRight()">&rarr;</button>
+    <button id="leftBtn" class="button left" value="left" onclick="moveLeft()">&larr;</button>
+  </div>
+
+  <script>
+    const tank = document.getElementById("tank");
+    const boom = document.getElementById("boom");
+
+    function randBoom(){
+      let boomTop = Math.floor(Math.random() * 190);
+      let boomLeft = Math.floor(Math.random() * 190);
+      boom.style.top = boomTop + "px";
+      boom.style.left = boomLeft + "px";
+    }
+
+    function getPostion(ele){
+      return {
+        left: ele.offsetLeft,
+        top : ele.offsetTop,
+      }
+    }
+
+    function moveUp(){
+      let currPostion = getPostion(tank);
+      let boomPosition = getPostion(boom);
+      // Lấy top hiện tại - 19px
+      if(currPostion.top - 30 > 0 ) {
+        tank.style.top = currPostion.top -  30 + "px";
+        tank.style.transform = "rotate(0deg)";
+      }
+    }
+
+    function moveDown(){
+      let currPostion = getPostion(tank);
+      let boomPosition = getPostion(boom);
+      // lấy top hiện tại + 19px
+      if(currPostion.top + 30 < 299){
+        tank.style.top = currPostion.top +  30 + "px";
+        tank.style.transform = "rotate(180deg)";
+      }
+    }
+    function moveRight(){
+      let currPostion = getPostion(tank);
+      let boomPosition = getPostion(boom);
+      if(currPostion.left + 30 < 599) {
+        tank.style.left = currPostion.left +  30 + "px";
+        tank.style.transform = "rotate(90deg)";
+      }
+
+      let newPostion = getPostion(tank);
+      if(newPostion.left + 30 > boomPosition.left && newPostion.top > boomPosition.top) {
+        tank.src ="https://s3.ap-southeast-1.amazonaws.com/learn.codegym.vn/media/public/2020/12/04175504/explosion.png";
+      }
+    }
+
+    function moveLeft(){
+      let currPostion = getPostion(tank);
+      let boomPosition = getPostion(boom);
+      if(currPostion.left - 30 > 0 ) {
+        tank.style.left = currPostion.left -  30 + "px";
+        tank.style.transform = "rotate(270deg)";
+      }
+
+    }
+
+  </script>
+</body>
+</html>

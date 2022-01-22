@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #bai8 { width: 600px; height:300px
+                ;background-color:rgb(122, 255, 211)
+            }
+            table{ position: relative; top: 20px}
+        h1{color:rgb(252, 83, 16)
+        }
+        th{color:rgb(32, 54, 250);
+            font-size: 20px
+        }
+        td{ position: relative;left:30px;
+
+          }
+          input{ font-size: 20px ;}
+          select{ font-size: 18px}
+          button{width:100px ; ;height:40px;
+                     position:relative; top: 50px;left: 200px
+        }
+        button:hover{ background-color:rgb(255, 7, 110)}
+    </style>
+</head>
+<body>
+    <div id="bai8">
+
+        <h1> Tính Điểm Thi Đại Học Khối D01</h1>
+
+          <table>
+                       <tr>
+                             <th> Môn Toán </th>
+                             <td>
+                                            <input type="number" id="T"></input>
+                             </td>
+                       </tr>
+                        <tr>
+                               <th> Môn Văn </th>
+                               <td>
+                                            <input type="number" id="V"></input>
+                               </td>
+
+                        </tr>
+                        <tr>
+                               <th> Môn Anh</th>
+                               <td>
+                                             <input type="number" id="A"></input>
+                                </td>
+                        </tr>
+                         <tr>
+                                 <th> Khu Vực </th>
+                                 <td>
+                                              <select id="sl">
+                                              <option value="KV1">KV1</option>
+                                              <option value="KV2">KV2</option>
+                                              <option value="KV2NT" > KV2-NT</option>
+                                              <option value="KV3"> KV3</option>
+                                      </select>
+                               </td>
+                      </tr>
+        </table>
+                                               <button class="TinhDiem" onclick="TinhDiem()"> Tính Điểm</button>
+    </div>
+
+
+            <script>
+                  function TinhDiem() {
+                        let t = parseFloat( document.getElementById("T").value);
+                        let v = parseFloat( document.getElementById("V").value);
+                        let a = parseFloat( document.getElementById("A").value);
+                        let td = t + v + a
+                        let sl = document.getElementById("sl").value;
+                        if (sl== "KV1"){
+                                alert(td + 0.75);
+                             }
+                        else if (sl ==  "KV2" ){
+                                alert(td + 0.25);
+                             }
+                        else if(sl == "KV2NT" ){
+                                alert(td + 0.5);
+                             }
+                        else  if( sl == "KV3" ){
+                                alert(td + 0)
+                             }
+
+
+                        }
+
+            </script>
+</body>
+</html>

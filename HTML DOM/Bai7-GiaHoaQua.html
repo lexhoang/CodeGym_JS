@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+              body { background-color:rgb(204, 253, 237);}
+              #bai7{ width: 300px; height: 150px;
+                   background-color: rgb(255, 136, 107);}
+    </style>
+</head>
+<body>
+    <div id="bai7">
+            <h1> <span style="color:rgb(198, 243, 0)">  Giá Hoa Quả </span></h1>
+                                                   <br>
+            <input type="text" class="Enter"/>
+            <button type="button" class="xemgia" onclick="xemgia()"> Xem Giá</button>
+   </div>
+            <script>
+
+                      function xemgia() {
+                      let x = document.querySelector('.nhapten').value;
+                       if(x == "Ổi"){
+                           alert("20000 VNĐ/kg");
+                       }
+                       if(x == "Dưa Hấu"){
+                           alert("20000 VNĐ/kg");
+                       }
+                       if( x == "Táo"){
+                           alert("30000 VNĐ/kg");
+                       }
+                       if(x == "Xoài"){
+                           alert("30000 VNĐ/kg");
+                       }
+                       if(x == "Cam"){
+                           alert("40000 VNĐ/kg");
+                       }
+                       if( x =="Chôm Chôm"){
+                        alert("40000 VNĐ/kg");
+                       };
+                        if(x == " Măng Cụt"){
+                        alert("50000 VNĐ/kg");
+                       }
+                }
+
+
+            </script>
+</body>
+</html>

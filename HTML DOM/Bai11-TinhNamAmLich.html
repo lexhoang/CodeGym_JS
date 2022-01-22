@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+            #bai11{border-left: 15px solid rgb(250, 238, 171);
+                border-top: 15px solid rgb(211, 212, 110);
+                border-right: 15px solid rgb(250, 238, 171);
+                border-bottom: 15px solid rgb(211, 212, 110);
+                width: 500px;height: 250px;
+                background-image: url("image/im1.png");
+                 margin: 50px auto;
+                 text-align:center;
+            }
+             h1{ color: red ;}
+
+             h2{position: relative;top:40px;
+                 font-size:30px ;
+                color:rgb(17, 60, 252);
+
+
+            }
+            input{width: 100px;
+                     height:30px;
+                     position: relative;
+                     top:30px
+            }
+            button{  position: relative;
+                      top:30px }
+    </style>
+</head>
+<body>
+    <div id="bai11">
+        <h1> Tính Năm Âm Lịch</h1>
+
+        <input type="number" id="duonglich"></input>
+        <button onclick="tracuu()"> Âm Lịch </button>
+
+        <h2 id="amlich"></h2>
+      <script>
+               function tracuu() {
+                   let year = (document.getElementById("duonglich").value)  ;
+                   let can = year % 10
+                   let chi = year % 12;
+                  switch (can) {
+                   case 0 :
+                       can = "Canh";
+                        break;
+                 case 1 :
+                       can= "Tân";
+                       break;
+                   case 2 :
+                       can = "Nhâm";
+                       break;
+                  case 3:
+                       can="Quý";
+                       break;
+
+                   case 4 :
+                       can="Giáp";
+                       break;
+
+                   case 5 :
+                       can="Ất";
+                       break;
+
+                   case 6 :
+                       can="Bính";
+                       break;
+
+                   case 7 :
+                       can="Đinh";
+                       break;
+
+                  case 8 :
+                       can="Mậu";
+                       break;
+
+                   case 9 :
+                       can="Kỷ";
+
+                  }
+                   switch (chi) {
+                       case 0 :
+                       chi="Thân";
+                       break;
+
+                       case 1 :
+                       chi="Dậu";
+                       break;
+
+                        case 2 :
+                       chi="Tuất";
+                       break;
+
+                         case 3 :
+                       chi="Hợi";
+                       break;
+
+                   case 4 :
+                       chi="tý";
+                       break;
+
+                   case 5 :
+                       chi="Sửu";
+                       break;
+
+                   case 6 :
+                       chi="Dần";
+                       break;
+
+                  case 7 :
+                       chi = " Mão";
+                       break;
+
+                   case 8 :
+                       chi="Thìn";
+                       break;
+
+                   case 9 :
+                       chi="Tỵ";
+                       break;
+
+                   case 10 :
+                       chi = "Ngọ";
+                       break;
+
+                   case 11 :
+                       chi = "Mùi";
+                   }
+
+                    let amlich = can + " " + chi
+                   document.getElementById("amlich").innerHTML = amlich
+               }
+
+
+
+       </script>
+    </div>
+
+</body>
+</html>

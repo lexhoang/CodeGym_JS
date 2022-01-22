@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                 body{background-color: rgb(243, 187, 187);}
+                 #cccn {background-color:rgb(255, 82, 29);
+                            width:400px; height:200px;
+
+                }
+                .CN{position: relative; left :5px}
+                h2{position:relative; top: 20px; left: 20px;}
+                #cs{position:relative; top:40px; left:150px;
+                       height: 30px;
+                }
+                #cs:hover{background-color:rgb(131, 72, 199)}
+    </style>
+</head>
+<body>
+       <div id="cccn">
+            <h2> Cân Nặng
+                <input type="number" class="CN"/>
+            </h2>
+            <h2>Chiều Cao
+                <input type="number"class="CC"/>
+            </h2>
+            <button id="cs" onclick="cs()">Kiểm Tra Chỉ Số</button>
+        </div>
+            <script>
+                function cs() {
+                    let x = document.querySelector('.CN').value;
+                    let y = document.querySelector('.CC').value;
+                    let z = x / ( y * y)  ;
+                    if(z < 16){
+                        alert("Gầy Độ III");
+                    }
+                     if( z>=16 && z < 17){
+                        alert("Gầy Độ II");
+                    }
+                     if (z >=17 && z < 18.5 ){
+                        alert("Gầy Độ I");
+                    }
+                   if(z >=18.5 && z < 25){
+                        alert("Bình Thường");
+                    }
+                    if  ( z>=25 && z < 30){
+                        alert("Thừa Cân");
+                    }
+                     if ( z >= 30 && z < 35){
+                        alert("Béo Phì Độ I")
+                    }
+                    if (z >= 35 && z < 40 ){
+                        alert("Béo Phì Độ II")
+                    }
+                    if ( z > 40){
+                        alert("Béo Phì Độ III")
+                    }
+            }
+
+            </script>
+</body>
+</html>

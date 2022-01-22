@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+          <h2><span style="color:red"> Nhập số</span></h2>
+
+          <input type="number" id="nhap"/>
+          <button id="so" onclick="Bai3()">Kiểm Tra</button>
+          <p id="demo" style="font-size:20px"> </p>
+
+
+
+        <script>
+
+                      function Bai3() {
+                          let x = document.getElementById('nhap').value;
+                          if(x % 2 == 0){
+                           document.getElementById("demo").innerHTML = "số chẵn";
+                          }else{
+                            document.getElementById("demo").innerHTML = "số lẻ"
+                          }
+                      }
+
+
+        </script>
+
+        </body>
+</html>

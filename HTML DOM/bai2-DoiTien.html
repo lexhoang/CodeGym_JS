@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .tp{ position:relative; left:25px}
+        .to{position:relative; left:50px}
+        #convert{ position:relative;left:100px;}
+    </style>
+</head>
+<body>
+          <table>
+
+            <tr>
+                        <th> Amount</th>
+                        <th class="Curency">From Curency</th>
+                        <th class="Curency1"> To Curency</th>
+            </tr>
+            <tr>
+                        <td>
+                            <input id="amount" type="number"/>
+                        </td>
+
+
+                        <td>
+                               <select class="tp" >
+                                <option value="VND">Việt Nam</option>
+                                   <option value="USD">USD</option>
+                               </select>
+                        </td>
+                        <td>
+                                <select class="to">
+                                <option value="USD">USD</option>
+                                <option value="VND">Việt Nam</option>
+                                </select>
+                        </td>
+                         <td>
+                                 <button id="convert" onclick="Convert()"> Convert </button>
+                         </td>
+            </tr>
+     </table>
+
+</body>
+</html>
+
+ <script>
+                function Convert() {
+                  let a = document.getElementById('amount').value;
+                  let x = document.querySelector('.tp').value;
+                  let y = document.querySelector('.to').value;
+                  if(x=="VND"&&y=="USD"){
+                    alert(23000/a)
+                  }
+                  if(x=="USD"&&y=="VND"){
+                    alert(23000*a)
+                  }
+                }
+ </script>

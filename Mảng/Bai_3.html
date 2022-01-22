@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <h1> Type Anthing Slowly</h1>
+
+              <textarea id="myText" cols = "60" rows="30" onkeydown="myText()" ></textarea>
+
+          <script>
+                 let array = new Array();
+                 let str = "";
+                 array[1]= "C",
+                 array[2]= "Ố",
+                 array[3]= " ",
+                 array[4]= "G",
+                 array[5]= "Ắ",
+                 array[6]= "N",
+                 array[7]= "G",
+                 array[8]= " ",
+                 array[9]= "T",
+                 array[10]= "H",
+                 array[11]= "À",
+                 array[12]= "N",
+                 array[13]= "H",
+                 array[14]= " ",
+                 array[15]= "C",
+                 array[16]= "Ô",
+                 array[17]= "N",
+                 array[18]= "G";
+
+                 function myText() {
+                    let input = document.getElementById('myText').value;
+                    let length = input.length
+                    if(length > 0) {
+                 for(let i = 1; i <= length; i++) {
+                    str += array[i];
+                     if (i == 19){
+                         document.getElementById('myText').value="";
+                         str = '';
+                     }
+                 }
+        }
+                 document.getElementById('myText').value= str;
+                 str = '';
+                 setTimeout(myText, 1);
+                }
+          </script>
+</body>
+</html>

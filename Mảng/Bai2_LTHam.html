@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+             let myColor = ["Red","Green","White","Black"];
+             myColor.join(" ")
+             document.write(myColor)
+
+             document.write("<br>")
+
+             let num = prompt("nhập");
+             let result = [num[0]];
+             for(let i = 0; i < num.length; i++){
+                 if (num[i - 1] % 2 ===0 && num[i]%2 === 0){
+                     result.push(' - ', num[i]);
+                 }else{
+                     result.push(num[i]);
+                 }
+             }
+             document.write(result.join(""))
+
+              document.write("<br>")
+
+              var str = prompt("Text");
+const UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const LOWER = 'abcdefghijklmnopqrstuvwxyz';
+const result = [];
+
+  for(let x=0; x<str.length; x++)
+  {
+    if(UPPER.includes(str[x]))
+    {
+      result.push(str[x].toLowerCase());
+    }
+    else if(LOWER.includes(str[x]))
+    {
+      result.push(str[x].toUpperCase());
+    }
+    else
+    {
+      result.push(str[x]);
+    }
+  }
+  document.write(result.join(""))
+
+
+    </script>
+</body>
+</html>

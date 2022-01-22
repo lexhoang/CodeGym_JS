@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <input type="text" class="txtValue" />
+        <button class="add" onclick="Add()">Add</button>
+        <button class="display" onclick="Display()">Display</button>
+        <p id="result"> </p>
+    </div>
+    <script>
+        let x = 0;
+        let array = Array();
+
+        function Add() {
+            array[x] = document.querySelector('.txtValue').value;
+            a = ("Element: " + array[x] + " Added at index " + x);
+            x++
+            document.querySelector('.txtValue').value = "";
+            document.getElementById("result").innerHTML = a
+        }
+
+        function Display() {
+            let e = "<hr/>";
+            for (let i = 0; i < array.length; i++) {
+                e += "Element " + i + " = " + array[i] + "<br>"
+            }
+            document.getElementById("result").innerHTML = e
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{background-color:#fcdfd2}
+            #TuDien{height: 400px;width:400px;
+                   background-color: rgb(255, 255, 255);
+                   margin:50px auto
+            }
+            #result{height: 70px;width:400px;
+                   background-color: rgb(253, 177, 142);
+                   margin:-50px auto;
+                    font-size:30px; color:azure;
+                    text-align:center;
+                }
+            h1{text-align: center;
+                 color:rgb(17, 17, 131);
+                 background-color: rgb(253, 177, 142)
+            }
+            #cosan{height: 170px;width:80px;
+                    background-color: rgb(253, 248, 236);
+                    position: relative;top:90px;left:290px;
+                    text-align: center;
+            }
+            .Eng,.Translate{font-size:18px ;
+                position: relative;top:90px;left:50px
+            }
+            .Translate:hover{background-color:rgba(81, 230, 68, 0.658)}
+    </style>
+</head>
+<body>
+
+      <div id="TuDien">
+                <h1> Từ Điển</h1>
+                <input type="text" class="Eng"/>
+                <button class="Translate" onclick="translateEng()">Translate</button>
+
+            <div id="cosan">
+                <p> Lemon </p>
+                <p> Apple </p>
+                <p>Orange </p>
+                <p>Mango </p>
+                <p>Banana </p>
+            </div>
+        </div>
+            <div id="result"></div>
+
+            <script>
+
+             function translateEng(){
+                    let value = document.querySelector('.Eng').value;
+                    document.querySelector(".Eng").value =""
+
+                    let eng =  ['Lemon', 'Apple', 'Orange', 'Mango', 'Banana'];
+                    let vn =   ['Quả Chanh', 'Quả Táo', 'Quả Cam', 'Quả Xoài', 'Quả Chuối'];
+                    let check = false
+                    for(let i in eng){
+                    // for (let i = 0; i < eng.length; i++){
+                        if(eng[i] === value){
+                            result = vn[i];
+                            document.getElementById("result").innerHTML = result;
+                            check = true;
+                        }
+                        if (check === false ){
+                        document.getElementById("result").innerHTML = "Chưa cập nhật"
+                    }
+                }
+            }
+            //    function translateEng(){
+        //             let value = document.querySelector('.Eng').value;
+        //             document.querySelector(".Eng").value =""
+
+        //             let Eng = [
+        //                  ['Lemon', 'Apple', 'Orange', 'Mango', 'Banana'],
+        //                  ['Quả Chanh', 'Quả Táo', 'Quả Cam', 'Quả Xoài', 'Quả Chuối']
+        //              ]
+
+        //            for(let i = 0; i < Eng.length; i++){
+        //                   for(let j = 0; j < Eng[i].length; j++){
+
+        //                       if(value== Eng[i][j]){
+        //                           result = Eng[i+1][j];
+        //                           document.getElementById("result").innerHTML = result
+        //                         }
+        //                 }
+        //         }
+        // }
+
+            </script>
+</body>
+</html>

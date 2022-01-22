@@ -1,0 +1,146 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.products li {
+    flex-basis: 25%;
+    list-style-type: none;
+    /* flex: 0 1 30rem; */
+    /* margin: 1rem; */
+    margin-top: 10rem;
+    /* position: relative; */
+    /* left: 0rem; */
+    /* width: 1rem; */
+    height: 30rem;
+}
+
+.product li img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: rgb(250, 242, 239);
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgb(228, 223, 223);
+    text-decoration: none;
+    height: 350px;
+}
+
+.product-image {
+    max-width: 34rem;
+    max-height: 34rem;
+    height: 300px;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product:hover {
+    border-top: 5px;
+    border-color: rgb(255, 0, 0)
+}
+
+.product-name {
+    color: rgb(41, 38, 38);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    display: flex;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: orangered
+}
+
+.overplay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: rgba(107, 109, 231, 0.6);
+}
+
+.xemthem {
+    /* text-decoration: none; */
+    margin-top: 5px;
+    color: #ffffff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: top;
+}
+
+.xemthem:hover {
+    color: orangered
+}
+
+.add {
+    margin: 180px auto;
+    border: none;
+    width: 160px;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #252525;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: calibri;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.add:hover {
+    color: #ffffff;
+    background-color: #f15fa3;
+    transition: all ease 0.3s;
+}
+
+.overplay {
+    visibility: hidden;
+}
+
+.product-image:hover .overplay {
+    visibility: visible;
+}

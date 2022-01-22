@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HƯƠNG GIANG SHOP</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    body {
+        background-image: url("images/bg2.jpg");
+    }
+    
+    input {
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1px auto;
+    }
+    
+    #firt {
+        background-color: rgb(19, 4, 100);
+        margin: 150px auto;
+        width: 300px;
+        height: 400px;
+    }
+    
+    #result {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        font-size: 25px;
+        color: #ff0606
+    }
+    
+    #input {
+        position: relative;
+        top: 20px;
+    }
+    
+    .firt p {
+        font-size: 20px;
+        color: #ffffff
+    }
+    
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        margin: 70px auto;
+        border: 3px solid rgb(185, 174, 174);
+        border-radius: 1px;
+        background-color: rgb(181, 248, 55);
+        text-decoration: none;
+        color: rgb(7, 11, 255)
+    }
+    
+    button:hover {
+        background-color: rgb(255, 85, 85)
+    }
+</style>
+
+<body>
+
+    <header class="header">
+        <div class="brand">
+            <a href="signin.html">HƯƠNG GIANG SHOP</a>
+        </div>
+    </header>
+
+    <div id="firt">
+        <div class="firt">
+            <div id="input">
+                <p><b>TÀI KHOẢN : </b> </p><input class="tk" type="text" placeholder="admin" />
+                <p><b>MẬT KHẨU : </b> </p> <input class="mk" type="password" placeholder="123456" />
+            </div>
+            <button onclick="Click()">Đăng Nhập</button>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Cảm ơn bạn đã ghé thăm shop
+    </footer>
+
+    </div>
+</body>
+<script>
+    function Click() {
+        let name = document.querySelector(".tk").value;
+        let pass = document.querySelector(".mk").value;
+        let arr1 = ["admin", "hoangbeo"]
+        let arr2 = ["123456", "99"]
+        for (let i in arr1) {
+            if (name == arr1[i] && pass == arr2[i]) {
+                location.href = "index.html"
+            } else {
+                document.getElementById("result").innerHTML = "Mời Nhập Lại"
+            }
+        }
+    }
+</script>
+
+</html>

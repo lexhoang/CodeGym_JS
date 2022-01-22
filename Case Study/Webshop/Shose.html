@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HƯƠNG GIANG SHOP</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="product.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="brand">
+            <a href="index.html">HƯƠNG GIANG SHOP</a>
+        </div>
+        <div id="search">
+            <input class="search" type="search" /> <button class="trans" onclick="search()">Search</button>
+        </div>
+        <div class="header-links">
+
+            <a href="signin.html">Sign In</a>
+        </div>
+    </header>
+    <div class="title">
+        <button class="description" onclick="openDescription()">&#9776; SẢN PHẨM</button>
+        <button class="cart" onclick="openCart()"><span>GIỎ HÀNG</span><img src="images/cart.png" style="width:25px;margin-top: 5px"></button>
+    </div>
+    <main class='main'>
+        <div id="product">
+            <div id="product-all"></div>
+        </div>
+        <aside class="siderbar">
+            <h2>CART</h2>
+            <button class="close" onclick="closeCart()"> X </button>
+            <button class="buy"> <a href="signin.html"> THANH TOÁN </a> </button>
+            <div id="cart"></div>
+        </aside>
+        <aside class="siderbar2">
+            <button class="close2" onclick="closeDescription()"> X </button>
+            <ul>
+                <div class="linksp">
+                    <a href="Bag.html">TÚI SÁCH</a><br>
+                    <hr>
+                    <a href="Dress.html">VÁY-ÁO</a><br>
+                    <hr>
+                    <a href="Shose.html">GIÀY</a>
+                </div>
+            </ul>
+        </aside>
+    </main>
+    <footer class="footer">
+        Cảm ơn bạn đã ghé thăm shop
+    </footer>
+</body>
+<script src="OOP.js"></script>
+<script src="CartShose.js"></script>
+<script src="Shose.js"></script>
+<script src="index.js"></script>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HƯƠNG GIANG SHOP</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="product_last.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="brand">
+            <a href="index.html">HƯƠNG GIANG SHOP</a>
+        </div>
+        <div id="search">
+            <input class="search" type="search" /> <button class="trans" onclick="search()">Search</button>
+        </div>
+        <div class="header-links">
+
+            <a href="signin.html">Sign In</a>
+        </div>
+    </header>
+    <div class="title">
+        <button class="description" onclick="openDescription()">&#9776; SẢN PHẨM</button>
+        <button class="cart" onclick="openCart()"><span>GIỎ HÀNG</span><img src="images/cart.png" style="width:30px;margin-top: 5px"></button>
+    </div>
+    <aside class="siderbar">
+        <h2> Giỏ Đồ Của Bạn</h2>
+        <button class="close" onclick="closeCart()"> X </button>
+        <ul>
+            <li>
+                <div id="result"></div>
+            </li>
+        </ul>
+    </aside>
+    <main class="main">
+        <div class="content">
+            <ul class="products_last">
+                <div class="slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <div class="slide first">
+                            <img src="images/chanvayxoe.jpg" alt="products">
+                        </div>
+                        <div class="slide">
+                            <img src="images/chanvayxoe1.jpg" alt="products">
+                        </div>
+                        <div class="slide">
+                            <img src="images/chanvayxoe2.jpg" alt="products">
+                        </div>
+                        <div class="slide">
+                            <img src="images/chanvayxoe3.jpg" alt="products">
+                        </div>
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"><img src="images/chanvayxoe.jpg" style='width: 6rem;'></label>
+                        <label for="radio2" class="manual-btn"><img src="images/chanvayxoe1.jpg" style='width: 6rem;'></label>
+                        <label for="radio3" class="manual-btn"><img src="images/chanvayxoe2.jpg" style='width: 6rem;'></label>
+                        <label for="radio4" class="manual-btn"><img src="images/chanvayxoe3.jpg" style='width: 6rem;'></label>
+                    </div>
+                </div>
+                <li>
+                    <div class="product_last-all">
+                        <h2 class='product_last-name'> VÁY XÒE </h2>
+                        <h3 class='product_last-price'>220.000 đ</h3>
+                        <p><b>Tên sản phẩm</b>:Chân Váy Tầng Xếp Ly Xòe Dáng Ngắn 2 Tầng Lưng Cạp Cao RYSO </p>
+                        <p><b>Chất liệu</b>: tuyết mưa dày mịn cao cấp</p>
+                        <p><b>Màu sắc</b>: Đen - Trắng - Hồng - Be</p>
+                        <p><b>Bảng size</b>:</p>
+                        <p>❌Size S :dưới 44kg Eo dưới 66, Mông dưới 85</p>
+                        <p>❌Size M : dưới 49kg Eo dưới 72 , Mông dưới 90,</p>
+                        <p>❌Size L : dưới 58kg Eo 72-78, Mông 100</p>
+                        <p><b>Kiểu dáng</b>: Chân Váy Tầng Xếp Ly , Váy Xòe Xếp Ly 2 Tầng Lưng Cạp Cao , Chân Váy Công Sở Cao Cấp </p>
+                    </div>
+                    <br/>
+                    <button class="add-last"> <a href="Dress.html"> Quay lại sản phẩm </a></button>
+                </li>
+            </ul>
+            <aside class="siderbar">
+                <h2> Giỏ Đồ Của Bạn</h2>
+                <button class="close" onclick="closeCart()"> X </button>
+                <ul>
+                    <li>
+                        <div id="result"></div>
+                    </li>
+                </ul>
+            </aside>
+            <aside class="siderbar2">
+                <button class="close2" onclick="closeDescription()"> X </button>
+                <ul>
+                    <div class="linksp">
+                        <a href="Bag.html">TÚI SÁCH</a><br>
+                        <hr>
+                        <a href="Dress.html">VÁY-ÁO</a><br>
+                        <hr>
+                        <a href="Shose.html">GIÀY</a>
+                    </div>
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        Cảm ơn bạn đã ghé thăm shop
+    </footer>
+    </div>
+</body>
+<script src="OOP.js"></script>
+<script src="index.js"></script>
+<!-- <script src="Dress.js"></script> -->
+<script src="product-last.js"></script>
+
+</html>

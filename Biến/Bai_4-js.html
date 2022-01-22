@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bài 4 </title>
+    <style>
+                body {background-color:rgb(213, 253, 253)}
+                 button {position: relative;left:40%;  font-size: 20px;
+                       margin-top: 5em;}
+    </style>
+</head>
+<body>
+        <p id="Bai4"></p>
+          <button type="button" onclick="Bai4()">TÍNH TIỀN VAY NGÂN HÀNG  <br> CLICK </button>
+          <script>
+
+                  function Bai4() {
+                   let a = prompt("Số Tiền Vay Ngân Hàng");
+                   let b = prompt("Lãi Suất");
+                   let n = prompt("Thời Gian (NĂM)");
+                   let A = parseFloat(a);
+                   let B = parseFloat(b);
+                   let N = parseFloat(n);
+                   let result = ( A + (   A  * ( B / 100 ) * N  )  )
+                   alert( result );
+                   document.getElementById("Bai4").innerHTML = alert
+                   }
+
+          </script>
+</body>
+</html>

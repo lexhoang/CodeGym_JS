@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(233, 206, 229);
+    }
+    
+    #bai5 {
+        margin: 10px auto;
+        width: 1000px;
+        height: 700px;
+        background-color: rgb(247, 119, 178)
+    }
+    
+    h1 {
+        text-align: center;
+        padding: 40px;
+        color: rgb(110, 9, 56)
+    }
+    
+    th,
+    td {
+        color: rgb(252, 235, 2);
+        position: relative;
+        top: 10px;
+        left: 50px
+    }
+    
+    button {
+        font-size: 15px;
+        position: relative;
+        top: 30px;
+        left: 190px;
+    }
+    
+    button:hover {
+        background-color: rgb(29, 243, 214)
+    }
+    
+    #hienthi {
+        font-size: 20px;
+        color: black;
+        position: relative;
+        top: 70px;
+        left: 80px;
+        width: 800px;
+    }
+</style>
+
+<body>
+    <div id="bai5">
+        <h1> Bức Thư Gửi Joe</h1>
+        <table>
+            <tr>
+                <th>
+                    USERNAME
+                </th>
+                <td>
+                    <input type="password" class="name" placeholder="Joe" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    ADDRESS
+                </th>
+                <td>
+                    <input type="text" class="address" placeholder="LA" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    TIME
+                </th>
+                <td>
+                    <input type="text" class="time" placeholder="1951" />
+                </td>
+            </tr>
+        </table>
+        <button class="click" onclick="Click()">Đọc Thư</button>
+        <div id="hienthi"></div>
+    </div>
+    <script>
+        function Click() {
+            let name = document.querySelector(".name").value;
+            let address = document.querySelector(".address").value;
+            let time = document.querySelector(".time").value;
+            let note = "Joe thương nhớ" + "<br>" +
+                "Em không biết phải nói sao để anh hiểu rằng, em nhớ anh thật nhiều. Em yêu anh đến khi trái tim này tan thành nghìn mảnh. Tất cả những gì em yêu thương, em khát khao và cần đến, chính là anh, mãi mãi về sau. Em chỉ muốn ở bên anh, và anh yêu hỡi, em sẽ trở thành người phụ nữ như anh mong muốn." + "<br />" +
+                "Có phải em thật tệ hại, khi cứ nghĩ đến anh thật nhiều, thật lâu và nhất là mỗi khi đêm xuống? Em hứa sẽ sẽ cố gắng triệu triệu lần hơn thế. Nhưng hơn tất cả, em chỉ mong một ngày nào đó, anh sẽ tự hào về em, như tự hào về vợ của anh, và mẹ của các con anh (ít nhất là 2 nhé, em vừa mới quyết định đấy!). Em nhớ thật nhiều cảm giác mỗi đêm anh ôm em và ru em ngủ trong vòng tay. Đêm nay, em chỉ muốn được gần bên anh… và anh biết không, trái tim em đang đau đớn đến nhường nào." + "<br />" +
+                "Anh yêu thương, đừng bao giờ rời xa em nữa nhé. Yêu anh rất nhiều." + "<br />" +
+                "Los Angeles, ngày 10 tháng 10 năm 1951.";
+            let hienthi = document.getElementById("hienthi");
+            if (name === "Joe" && address === "LA" && time === "1951") {
+                hienthi.innerHTML = note
+            } else {
+                hienthi.innerHTML = "Cút Đi - Mày Tuổi Gì Đọc Thư Tình Của Tao"
+            }
+        }
+    </script>
+</body>
+
+</html>

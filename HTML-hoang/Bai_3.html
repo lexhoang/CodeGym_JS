@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tạo Form don gian</title>
+    <style>
+        body {
+            background-color: rgb(178, 245, 245);
+            display: grid;
+        }
+        
+        form {
+            width: 500px;
+            margin: 20px auto;
+            background: rgb(245, 245, 245)
+        }
+        
+        h1 {
+            margin: 0.2em 0.1em 0.4em 0.1em;
+            color: white;
+            text-align: center;
+            background: orangered
+        }
+        
+        .a {
+            color: rgb(14, 14, 177);
+            font-size: 18px;
+        }
+        
+        .b {
+            position: relative;
+            left: 5px;
+        }
+        
+        .c {
+            color: rgb(255, 136, 0);
+            position: relative;
+            left: 13px;
+        }
+        
+        .d {
+            position: relative;
+            left: 80px;
+        }
+        
+        input {
+            text-align: left;
+            position: relative;
+            left: 4px;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="https://learn.codegym.vn/">
+        <h1>Sở thích của bạn</h1>
+        <table>
+            <tr>
+                <td class="a">
+                    <label>Họ và tên</label>
+                </td>
+                <td class="b"> <input type="name" name="Your name" style="width:200px; height:20px;border-top: 3.5px solid rgb(180, 166, 166);border-left: 3.5px solid rgb(180, 166, 166);"></input>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="a">
+                    <label>Email</label>
+                </td>
+                <td class="b"> <input type="email" name="email" style="width: 130px; height:20px; border-top: 3.5px solid rgb(180, 166, 166);border-left: 3.5px solid rgb(180, 166, 166)"></input>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table>
+            <tr>
+                <td class="a">Sở thích</td>
+                <td class="c"> <input type="checkbox" name="hobby"> Thể thao</td>
+                <td class="c"> <input type="checkbox" name="hobby"> Âm nhạc</td>
+                <td class="c"> <input type="checkbox" name="hobby"> Đọc sách</td>
+            </tr>
+            <tr class="c">
+                <td></td>
+                <td> <input type="checkbox" name="hobby"> Lướt web </td>
+                <td> <input type="checkbox" name="hobby"> Chơi game</td>
+                <td> <input type="checkbox" name="hobby"> Điện ảnh</td>
+            </tr>
+            <tr class="c">
+                <td></td>
+                <td> <input type="checkbox" name="hobby"> Du lịch </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td class="d"> <input type="submit" name="submit" value="Gửi thông tin" style="height:25px;border-bottom:3.5px solid rgb(112, 110, 110);border-right: 4.5px solid rgb(112, 110, 110);"></td>
+                <td class="d"> <input type="reset" name="reset" value="Nhập lại" style="height:25px; border-bottom:3.5px solid rgb(112, 110, 110);border-right: 4px solid rgb(112, 110, 110)"></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>

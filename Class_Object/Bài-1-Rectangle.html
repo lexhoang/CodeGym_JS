@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #result {
+        width: 602px;
+        height: 50px;
+        position: relative;
+        top: -4px;
+        font-size: 20px;
+        color: white;
+        background-color: rgb(13, 2, 65);
+        flex: 1;
+    }
+</style>
+
+<body>
+    <canvas id="canvas" width="600" height="300" style="border: 1px solid"></canvas>
+    <div id="result"></div>
+</body>
+
+<script>
+    class Rectangle {
+        constructor(longs, width) {
+            this.longs = longs;
+            this.width = width;
+        }
+        getLongs() {
+            return this.longs
+        };
+        setLongs(longs) {
+            this.longs = longs;
+        }
+        getWidth() {
+            return this.width
+        };
+        setWidth(width) {
+            this.width = width;
+        }
+        getAcreage() {
+            return (this.longs + this.width) * 2
+        };
+        getPerimeter() {
+            return (this.longs * this.width)
+        };
+        drawRectangle() {
+            let ctx = document.getElementById("canvas").getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.fillRect(200, 100, this.longs, this.width);
+        }
+    }
+    let rectangle = new Rectangle(200, 100)
+    document.getElementById("result").innerHTML = ("Chu Vi: " + rectangle.getAcreage() + "<br/>" + "Diện Tích: " + rectangle.getPerimeter())
+    rectangle.drawRectangle()
+</script>
+
+</html>

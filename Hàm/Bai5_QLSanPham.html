@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { background-color:rgb(255, 255, 255)}
+        #qlsp{width: 400px; height:600px;
+                  background-image:url("image/im1.jpg");
+                  margin:20px auto;
+        }
+        #last{width: 400px; height:50px;
+          background-color: rgb(1, 4, 44);
+          margin:-20px auto;
+        }
+        h1{padding:10px; text-align:center;
+          background-color:rgb(1, 4, 44); color:white
+        }
+
+        input{margin:10px;
+                  height:20px;
+                  border-radius: 5px;
+        }
+        button{width: 70px;height: 30px;
+                    border-radius: 5px;
+                    color:white;
+                   background-color:rgb(15, 185, 24)
+        }
+        .add:hover{background-color: rgb(255, 94, 0);
+        }
+        .edit:hover{background-color: rgb(255, 122, 188);
+        }
+        .delete:hover{background-color: red;
+        }
+        #inputAdd{width:280px; height:50px;
+                border-radius:5px;
+                background-color:rgb(206, 197, 197)
+              }
+        #inputEdit{width:280px; height:50px;
+                border-radius:5px;
+                background-color:rgb(206, 197, 197)
+              }
+        .name{text-align:left
+        }
+        .quantily{color:rgb(255, 166, 0); position: relative;left:125px
+        }
+        table {width:400px;
+        }
+        tr:nth-child() {
+    background-color: #bbb4b4;
+  }
+        td{position: relative;top:30px}
+  </style>
+</head>
+
+<body>
+
+ <div id="qlsp">
+
+    <h1>Add New Product</h1>
+       <div id="inputAdd">
+                      <input type="text" class="addProduct" placeholder="New Product"/>&ensp;<button class="add" onclick="addProduct()">Add</button>
+        </div>
+                                                                       <br>
+      <div id="inputEdit">
+                      <input type="text" class="editProduct" placeholder="Edit Product"/>&ensp;<button class="edit" onclick="newEdit()">Edit</button>
+      </div>
+      <h2>Display All Product</h2>
+      <div id="result"></div>
+
+</div>
+    <div id="last"></div>
+
+    <script>
+             let arrayProduct = ["Iphone","SamSung","Oppo", "Nokia", "Xiaomi", "SonyXperia"];
+             let value;
+             function displayProduct(){
+                let data = "<table><tr><th class='name' >Product Name</th><th class='quantily'>"+arrayProduct.length+"products</th></tr>"
+                for(let i=0; i<arrayProduct.length; i++){
+                    data += "<tr>"
+                    data += "<td>"+arrayProduct[i]+"</td>"
+                    data += "<td><button class='edit' onclick='editProduct("+i+")'>Edit</button></td>"
+                    data += "<td><button  class='delete' onclick='deleteProduct("+i+")'>Delete</button></td>"
+                    data += "</tr>"
+                }
+                data += "<table>"
+                    document.getElementById("result").innerHTML = data
+
+             }displayProduct()
+
+             function addProduct(){
+                let add = document.querySelector(".addProduct").value;
+                document.querySelector(".addProduct").value=""
+                arrayProduct.push(add)
+                displayProduct()
+             }
+
+             function editProduct(index){
+               document.querySelector(".editProduct").value = arrayProduct[index]
+               value = index
+             }
+
+             function newEdit(){
+                let newEdit = document.querySelector(".editProduct").value;
+                document.querySelector(".editProduct").value=""
+                arrayProduct[value] = newEdit
+                displayProduct()
+           }
+
+             function deleteProduct(index){
+               confirm("Bạn chắc chắn muốn xóa: " + arrayProduct[index])
+               arrayProduct.splice(index,1)
+               displayProduct()
+             }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(240, 240, 234);
+        }
+        
+        #bai1 {
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            text-align: center;
+            margin: 30px auto;
+        }
+        
+        h1 {
+            color: hotpink
+        }
+        
+        h2 {
+            color: rgb(255, 187, 0);
+            position: relative;
+            top: 20px
+        }
+        
+        p {
+            color: cornflowerblue
+        }
+        
+        .cl:hover {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="bai1">
+        <h1> Bài 1 </h1>
+        <p>Số Thứ Nhất
+            <input type="number" class="stn" />
+        </p>
+        <p>Số Thứ Hai
+            <input type="number" class="sth" />
+        </p>
+        <br/>
+        <button type="button" class="cl" onclick="bai1()"> Click result </button>
+
+        <h2 id="result"></h2>
+    </div>
+    <script>
+        function bai1() {
+            let number1 = document.querySelector('.stn').value;
+            let number2 = document.querySelector('.sth').value;
+            if (number1 > number2) {
+                document.getElementById("result").innerHTML = (number1 + " " + "Là số lớn nhất");
+            }
+            if (number1 <= number2) {
+                let result = parseFloat(number1) + parseFloat(number2);
+                document.getElementById("result").innerHTML = `${result}`
+            }
+        }
+    </script>
+</body>
+
+</html>

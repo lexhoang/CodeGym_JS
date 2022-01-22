@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {background-color: rgb(236, 228, 228);}
+        #form{width:250px;height:250px;
+            background-color:white;
+            text-align:center; margin:70px auto
+        }
+        h1{color:rgb(255, 153, 0)}
+        h2{position:relative;top:60px;
+              color:rgb(0, 230, 88);
+        }
+        #enter, .star{position:relative;top:30px}
+        .star:hover{background-color:aqua}
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h1> Bài 2 </h1>
+        <input type="text" id="enter"/>
+        <button class="star" onclick="myStar()">Click</button>
+        <h2 id="result"></h2>
+    </div>
+
+         <script>
+
+             function myStar() {
+                let value = document.getElementById("enter").value;
+                let stars =['Polaris', 'Aldebaran', 'Deneb','Vega','Altair', 'Dubhe','Regulus'];
+                let constellations = ['Ursa', 'Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+                let check = false
+                 for(let i in stars) {
+                   if(stars[i] === value){
+                       result = constellations[i];
+                       document.querySelector('#result').innerHTML = result;
+                       check = true;
+                   }
+                   if(check == false ){
+                       document.getElementById("result").innerHTML = "Khong co"
+                   }
+                 }
+             }
+         </script>
+</body>
+</html>

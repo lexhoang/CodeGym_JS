@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <!-- <input type ="number" id="input"/>
+          <button onclick="snt()"></button>
+          <span id="result"></span> -->
+    <script>
+
+                       //1 KIỂM TRA XEM CÓ PHẢI SNT KO
+                function ktSnt(num) {
+
+                      if (num < 2 ){
+                          return false;
+                      }
+                      for (let i = 2; i < Math.sqrt(num); i++){
+                          if (num % i === 0){
+                              return false;
+                          }
+                      }
+                      return true;
+                }
+
+                       //2 TÌM CÁC SNT NHỎ HƠN 10000
+                function sntNhoHon1000(){
+                    let num = 2
+                    while(num < 10000){
+                        if (ktSnt(num)){
+                            document.write(num + "; ")
+                        }
+                        num++
+                    }
+                }
+                sntNhoHon1000()
+
+
+            //     //3 HIỂN THỊ 50 SNT ĐẦU TIÊN
+            //     let a = +prompt("Enter number")
+            //     function count50Snt(dem){
+            //         let num = 2;
+            //         let count = 0;
+            //         while(count < dem){
+            //             if(ktSnt(num)){
+            //                 document.write(num + "; ")
+            //                 count++
+            //             }
+            //             num ++
+            //         }
+            //     }
+            // count50Snt(a)
+
+
+                //4 TÍNH TỔNG  20 SNT BẮT ĐẦU TỪ 17
+            //       function sumPrime20From17(){
+            //           let num = 17;
+            //           let count = 0;
+            //           let sum = 0;
+            //           while(count < 20){
+            //               if(ktSnt(num)){
+            //                   document.write(num + "; ")
+            //                   sum += num
+            //                   count++
+            //               }
+            //               num ++
+            //           }
+            //           return sum;
+            //       }
+            // alert( sumPrime20From17() )
+
+
+        // let num = parseInt(prompt("Enter Number"));
+        // let count = 0, N = 2, check = false, result = "";
+        // while(count < num){
+        //   for(let i = 2; i < N; i++){
+        //     if(N % i === 0){
+        //       check = true;
+        //       break;
+        //     }
+        //     check = false;
+        //   }
+        //   if(check === false ){
+        //     count++;
+        //     result += `${N},`;
+        //   }
+        //   N++;
+        // }
+        // document.write(result)
+
+</script>
+</body>
+</html>

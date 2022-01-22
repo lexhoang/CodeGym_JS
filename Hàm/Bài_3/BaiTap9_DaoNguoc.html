@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <script>
-        let value
-        do {
-            value = prompt("Nhập vào số từ 1 -> 10");
+
+        function sn(){
+            // let arr =[prompt("Enter First Number"),prompt("Enter Next Number"),prompt("Enter Last Number")]
+            let arr = [2,4,6,8,10,12,18,20]
+            return arr.reverse()
         }
-        while (value < 1 || value > 10);
-        alert("Số bạn vừa nhập là: " + value);
+        alert(sn())
+
     </script>
-
-
 </body>
-
 </html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {background-color:rgb(221, 224, 226)}
+    h2{
+        color: rgb(255, 1, 1);
+        text-align: center;
+        padding: 10px
+    }
+    #formmeter{
+        background-color:rgb(0, 255, 21);
+        width: 400px;height: 170px;
+        margin: 10px auto;
+    }
+    #formfoot{
+        background-color:rgb(19, 18, 17);
+         width: 400px;height: 110px;
+         margin: -10px auto;
+        border-top: 3px solid red
+    }
+    #foot{position:relative;left:10px}
+    .meter{
+        color: rgb(0, 0, 0);
+        position: relative;top:25px;
+        margin:10px;
+    }
+    .foot{
+        color: white;
+        position: relative;top:20px;
+        margin:10px;
+    }
+
+</style>
+<body>
+         <form id="formmeter">
+                 <h2>Chuyển đổi giữa Meter và Foot</h2>
+
+                 <div class="meter">
+                    <lable>Chuyển đổi Meter: </lable>
+                    <input type="number" id="meter" placeholder="Meter"
+                           oninput="myMeter(this.value)">
+                    <p>Foot:<span id="resultmeter"></span> </p>
+                 </div>
+         </form>
+
+         <form id="formfoot">
+
+             <div class="foot">
+                 <lable >Chuyển đổi Foot:  </lable>
+                 <input type="number" id="foot" placeholder="Foot"
+                            oninput="myFoot(this.value)">
+                <p>Meter: <span id="resultfoot"></span></p>
+             </div>
+         </form>
+<script>
+          function myMeter(value){
+              value = parseFloat(value);
+              document.getElementById("resultmeter").innerHTML = value*3.279;
+          }
+          function myFoot(value){
+              value = parseFloat(value);
+              document.getElementById("resultfoot").innerHTML = value*0.305;
+          }
+</script>
+    <!-- <input type="number" class="enter"/>
+    <br/> <br/>
+    <button onclick="Meter()">Chuyển sang foot</button>
+    <button onclick="Foot()">Chuyển sang meter</button>
+    <div id="result"></div>
+    <script>
+           function Meter() {
+               let meter = document.querySelector(".enter").value;
+               foot = 3.279 * meter
+               document.getElementById("result").innerHTML = foot
+           }
+           function Foot(){
+               let foot = document.querySelector(".enter").value;
+               meter = 0.305*foot
+               document.getElementById("result").innerHTML = meter
+           } -->
+    </script>
+</body>
+</html>
